@@ -1,0 +1,13 @@
+﻿l_english:
+
+soul_travel_decision: "Perform the Soul Travel Ritual"
+soul_travel_decision_desc: "You gather the paraphernalia: herbs, gems, a prisoner, your heir... and a dagger crafted from star metal. \n\nYour bodyguards have secured a room in the darkest bowels of your castle, standing guard against any who would disturb this unholy ritual.\n\nAll is silence."
+soul_travel_decision_tooltip: "Have your soul travel to a new body, and leave your old body behind."
+soul_travel_decision_confirm: "Plunge a dagger into your heart!"
+soul_travel_decision_effect_tooltip: Your soul travels to your heir's body.
+
+enable_raiding_for_sea_wolves_decision: "Raiding is love, raiding is life"
+enable_raiding_for_sea_wolves_decision_desc: "Your forebears raided and so will you. Forever."
+enable_raiding_for_sea_wolves_decision_tooltip: "Establish the tradition of raiding for your dynasty."
+enable_raiding_for_sea_wolves_decision_confirm: "Bloody the shores, pillage the lands!"
+enable_raiding_for_sea_wolves_decision_effect_tooltip: You establish the tradition of raiding for your dynasty.

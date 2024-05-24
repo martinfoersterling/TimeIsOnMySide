@@ -1,0 +1,39 @@
+soul_travel_decision = {
+	desc = soul_travel_decision_desc
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	selection_tooltip = soul_travel_decision_tooltip
+	
+	major = no
+	
+	ai_check_interval = 0
+
+	is_shown = {
+		this = root #only the player
+		exists = player_heir
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_commanding_army = no
+	}
+
+	is_valid = {
+		NOT = { exists = involved_activity }
+		player_heir = { is_adult = no }
+		OR = {
+			has_trait = witch
+			any_secret = { secret_type = secret_witch }
+	}
+
+	effect = {
+		soul_travel_decision_effect = yes
+	}
+	
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

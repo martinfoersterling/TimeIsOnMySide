@@ -1,0 +1,2954 @@
+soul_travel_decision_effect = {
+
+	# TODO this should be a secret that the bodyguards could spill
+	add_piety_level = -1
+
+	if = {
+		limit = {
+			is_ai = yes
+			exists = dynasty
+		}
+		dynasty = {
+			# TODO this should be a secret that the bodyguards could spill
+			# add_dynasty_prestige = medium_dynasty_prestige_loss
+		}
+	}
+	else_if = {
+		limit = { exists = dynasty }
+		dynasty = {
+			# TODO this should be a secret that the bodyguards could spill
+			# add_dynasty_prestige_level = -1
+		}
+	}
+	player_heir = {
+		#TODO more stress... like... ALL THE STRESS
+		add_stress = 900
+		#TODO I havent found a way to remove perks or perk unlocks. There seems to be no command for that
+		# so in order to not be completely overpowered, it makes sense that the heir must be a child so
+		# that the heir has no perks, in order to not gain both the current AND future player characters' perks.
+		# Refunding all perks works, but then you have perk unlocks for all refunded perks, so it doesn't fix the problem
+		# refund_all_perks = yes
+		# at least reset any lifestyle xp the child might have from somewhere, I dunno
+		add_lifestyle_xp_all -15000
+
+		#oof.... isnt there a better way to do this
+
+# the target gets all perks that the origin had		
+
+#martial
+		if = {
+			limit = {
+				root = { has_perk = bellum_justum_perk }
+			}
+			add_perk = bellum_justum_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = parthian_tactics_perk }
+			}
+			add_perk = parthian_tactics_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = envelopment_perk }
+			}
+			add_perk = envelopment_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = organized_retreat_perk }
+			}
+			add_perk = organized_retreat_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = hit_and_run_perk }
+			}
+			add_perk = hit_and_run_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = engineered_for_destruction_perk }
+			}
+			add_perk = engineered_for_destruction_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = living_off_the_land_perk }
+			}
+			add_perk = living_off_the_land_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = sappers_perk }
+			}
+			add_perk = sappers_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = strategist_perk }
+			}
+			add_perk = strategist_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = serve_the_crown_perk }
+			}
+			add_perk = serve_the_crown_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = a_mans_home_perk }
+			}
+			add_perk = a_mans_home_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = enduring_hardships_perk }
+			}
+			add_perk = enduring_hardships_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = prepared_conscription_perk }
+			}
+			add_perk = prepared_conscription_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = strict_organization_perk }
+			}
+			add_perk = strict_organization_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = hard_rule_perk }
+			}
+			add_perk = hard_rule_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = soldiers_of_lesser_fortune_perk }
+			}
+			add_perk = soldiers_of_lesser_fortune_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = absolute_control_perk }
+			}
+			add_perk = absolute_control_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = overseer_perk }
+			}
+			add_perk = overseer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = stalwart_leader_perk }
+			}
+			add_perk = stalwart_leader_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = courtship_perk }
+			}
+			add_perk = courtship_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = promising_prospects_perk }
+			}
+			add_perk = promising_prospects_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = loyalty_and_respect_perk }
+			}
+			add_perk = loyalty_and_respect_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = chivalric_dominance_perk }
+			}
+			add_perk = chivalric_dominance_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = never_back_down_perk }
+			}
+			add_perk = never_back_down_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = kingsguard_perk }
+			}
+			add_perk = kingsguard_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = peacemaker_perk }
+			}
+			add_perk = peacemaker_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = gallant_perk }
+			}
+			add_perk = gallant_perk
+		}
+
+#diplomacy
+
+		if = {
+			limit = {
+				root = { has_perk = thoughtful_perk }
+			}
+			add_perk = thoughtful_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = ducal_conquest_perk }
+			}
+			add_perk = ducal_conquest_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = forced_vassalage_perk }
+			}
+			add_perk = forced_vassalage_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = adaptive_traditions_perk }
+			}
+			add_perk = adaptive_traditions_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = flexible_truces_perk }
+			}
+			add_perk = flexible_truces_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = defensive_negotiations_perk }
+			}
+			add_perk = defensive_negotiations_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = embassies_perk }
+			}
+			add_perk = embassies_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = accomplished_forger_perk }
+			}
+			add_perk = accomplished_forger_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = diplomat_perk }
+			}
+			add_perk = diplomat_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = benevolent_intent_perk }
+			}
+			add_perk = benevolent_intent_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = inspiring_rule_perk }
+			}
+			add_perk = inspiring_rule_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = firm_hand_perk }
+			}
+			add_perk = firm_hand_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = praetorian_guard_perk }
+			}
+			add_perk = praetorian_guard_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = true_ruler_perk }
+			}
+			add_perk = true_ruler_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = writing_history_perk }
+			}
+			add_perk = writing_history_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = a_life_of_glory_perk }
+			}
+			add_perk = a_life_of_glory_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = dignitas_perk }
+			}
+			add_perk = dignitas_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = august_perk }
+			}
+			add_perk = august_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = befriend_perk }
+			}
+			add_perk = befriend_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = confidants_perk }
+			}
+			add_perk = confidants_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = flatterer_perk }
+			}
+			add_perk = flatterer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = groomed_to_rule_perk }
+			}
+			add_perk = groomed_to_rule_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = familial_familiar_perk }
+			}
+			add_perk = familial_familiar_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = thicker_than_water_perk }
+			}
+			add_perk = thicker_than_water_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = friendly_counsel_perk }
+			}
+			add_perk = friendly_counsel_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = sound_foundations_perk }
+			}
+			add_perk = sound_foundations_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = family_man_perk }
+			}
+			add_perk = family_man_perk
+		}
+
+#stewardship
+
+		if = {
+			limit = {
+				root = { has_perk = golden_obligations_perk }
+			}
+			add_perk = golden_obligations_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = heregeld_perk }
+			}
+			add_perk = heregeld_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = detailed_ledgers_perk }
+			}
+			add_perk = detailed_ledgers_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = war_profiteer_perk }
+			}
+			add_perk = war_profiteer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = fearful_troops_perk }
+			}
+			add_perk = fearful_troops_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = it_is_my_domain_perk }
+			}
+			add_perk = it_is_my_domain_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = golden_aplomb_perk }
+			}
+			add_perk = golden_aplomb_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = at_any_cost_perk }
+			}
+			add_perk = at_any_cost_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = avaricious_perk }
+			}
+			add_perk = avaricious_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = tax_man_perk }
+			}
+			add_perk = tax_man_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = defensive_measures_perk }
+			}
+			add_perk = defensive_measures_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = organized_muster_rolls_perk }
+			}
+			add_perk = organized_muster_rolls_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = cutting_corners_perk }
+			}
+			add_perk = cutting_corners_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = professional_workforce_perk }
+			}
+			add_perk = professional_workforce_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = centralization_perk }
+			}
+			add_perk = centralization_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = popular_figurehead_perk }
+			}
+			add_perk = popular_figurehead_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = divided_attention_perk }
+			}
+			add_perk = divided_attention_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = architect_perk }
+			}
+			add_perk = architect_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = meritocracy_perk }
+			}
+			add_perk = meritocracy_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = chains_of_loyalty_perk }
+			}
+			add_perk = chains_of_loyalty_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = likable_perk }
+			}
+			add_perk = likable_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = positions_of_power_perk }
+			}
+			add_perk = positions_of_power_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = large_levies_perk }
+			}
+			add_perk = large_levies_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = soon_forgiven_perk }
+			}
+			add_perk = soon_forgiven_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = toe_the_line_perk }
+			}
+			add_perk = toe_the_line_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = honored_to_serve_perk }
+			}
+			add_perk = honored_to_serve_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = administrator_perk }
+			}
+			add_perk = administrator_perk
+		}
+
+#intrigue
+
+		if = {
+			limit = {
+				root = { has_perk = truth_is_relative_perk }
+			}
+			add_perk = truth_is_relative_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = digging_for_dirt_perk }
+			}
+			add_perk = digging_for_dirt_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = kidnapper_perk }
+			}
+			add_perk = kidnapper_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = court_of_shadows_perk }
+			}
+			add_perk = court_of_shadows_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = prepared_for_anything_perk }
+			}
+			add_perk = prepared_for_anything_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = swift_execution_perk }
+			}
+			add_perk = swift_execution_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = a_job_done_right_perk }
+			}
+			add_perk = a_job_done_right_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = twice_schemed_perk }
+			}
+			add_perk = twice_schemed_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = schemer_perk }
+			}
+			add_perk = schemer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = like_weed_in_a_garden_perk }
+			}
+			add_perk = like_weed_in_a_garden_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = unshackled_lust_perk }
+			}
+			add_perk = unshackled_lust_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = subtle_desire_perk }
+			}
+			add_perk = subtle_desire_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = mortal_adoration_perk }
+			}
+			add_perk = mortal_adoration_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = enticing_opportunity_perk }
+			}
+			add_perk = enticing_opportunity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = home_advantage_perk }
+			}
+			add_perk = home_advantage_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = graceful_recovery_perk }
+			}
+			add_perk = graceful_recovery_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = smooth_operator_perk }
+			}
+			add_perk = smooth_operator_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = seducer_perk }
+			}
+			add_perk = seducer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = dark_insights_perk }
+			}
+			add_perk = dark_insights_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = divine_retribution_perk }
+			}
+			add_perk = divine_retribution_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = dreadful_perk }
+			}
+			add_perk = dreadful_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = thriving_in_chaos_perk }
+			}
+			add_perk = thriving_in_chaos_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = malice_implicit_perk }
+			}
+			add_perk = malice_implicit_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = fear_tax_perk }
+			}
+			add_perk = fear_tax_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = forever_infamous_perk }
+			}
+			add_perk = forever_infamous_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = prison_feudal_complex_perk }
+			}
+			add_perk = prison_feudal_complex_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = torturer_perk }
+			}
+			add_perk = torturer_perk
+		}
+
+#learning
+
+		if = {
+			limit = {
+				root = { has_perk = anatomical_studies_perk }
+			}
+			add_perk = anatomical_studies_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = carefree_perk }
+			}
+			add_perk = carefree_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = mental_resilience_perk }
+			}
+			add_perk = mental_resilience_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = restraint_perk }
+			}
+			add_perk = restraint_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = know_thyself_perk }
+			}
+			add_perk = know_thyself_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = wash_your_hands_perk }
+			}
+			add_perk = wash_your_hands_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = iron_constitution_perk }
+			}
+			add_perk = iron_constitution_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = healthy_perk }
+			}
+			add_perk = healthy_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = whole_of_body_perk }
+			}
+			add_perk = whole_of_body_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = pedagogy_perk }
+			}
+			add_perk = pedagogy_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = open_minded_perk }
+			}
+			add_perk = open_minded_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = apostate_perk }
+			}
+			add_perk = apostate_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = scientific_perk }
+			}
+			add_perk = scientific_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = planned_cultivation_perk }
+			}
+			add_perk = planned_cultivation_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = scholarly_circles_perk }
+			}
+			add_perk = scholarly_circles_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = learn_on_the_job_perk }
+			}
+			add_perk = learn_on_the_job_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = sanctioned_loopholes_perk }
+			}
+			add_perk = sanctioned_loopholes_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = scholar_perk }
+			}
+			add_perk = scholar_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = faithful_perk }
+			}
+			add_perk = faithful_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = zealous_proselytizer_perk }
+			}
+			add_perk = zealous_proselytizer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = religious_icon_perk }
+			}
+			add_perk = religious_icon_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = prophet_perk }
+			}
+			add_perk = prophet_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = clerical_justifications_perk }
+			}
+			add_perk = clerical_justifications_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = church_and_state_perk }
+			}
+			add_perk = church_and_state_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = radiant_perk }
+			}
+			add_perk = radiant_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = defender_of_the_faith_perk }
+			}
+			add_perk = defender_of_the_faith_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = theologian_perk }
+			}
+			add_perk = theologian_perk
+		}
+
+#prowess from more lifestyles mod
+
+		if = {
+			limit = {
+				root = { has_perk = nht_perpetual_mastery_perk }
+			}
+			add_perk = nht_perpetual_mastery_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_controlled_supplies_perk }
+			}
+			add_perk = nht_controlled_supplies_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_master_of_logistics_perk }
+			}
+			add_perk = nht_master_of_logistics_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_vanguard_inspiration_perk }
+			}
+			add_perk = nht_vanguard_inspiration_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_thrifty_operations_perk }
+			}
+			add_perk = nht_thrifty_operations_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_border_buards_perk }
+			}
+			add_perk = nht_border_buards_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_resolute_vassals_perk }
+			}
+			add_perk = nht_resolute_vassals_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_noble_allegiance_perk }
+			}
+			add_perk = nht_noble_allegiance_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_commander_perk }
+			}
+			add_perk = nht_commander_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_ruthless_assault_perk }
+			}
+			add_perk = nht_ruthless_assault_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_orderly_maneuvers_perk }
+			}
+			add_perk = nht_orderly_maneuvers_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_rallying_call_perk }
+			}
+			add_perk = nht_rallying_call_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_cadenced_march_perk }
+			}
+			add_perk = nht_cadenced_march_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_inspire_fear_perk }
+			}
+			add_perk = nht_inspire_fear_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_unrelenting_pursuit_perk }
+			}
+			add_perk = nht_unrelenting_pursuit_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_half_grip_perk }
+			}
+			add_perk = nht_half_grip_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_ambush_expert_perk }
+			}
+			add_perk = nht_ambush_expert_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_vanguard_perk }
+			}
+			add_perk = nht_vanguard_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_shieldbearer_perk }
+			}
+			add_perk = nht_shieldbearer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_cartographer_eye_perk }
+			}
+			add_perk = nht_cartographer_eye_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_scouting_the_path_perk }
+			}
+			add_perk = nht_scouting_the_path_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_iron_resolve_perk }
+			}
+			add_perk = nht_iron_resolve_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_tactical_retreat_perk }
+			}
+			add_perk = nht_tactical_retreat_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_swordsmanship_teaching_perk }
+			}
+			add_perk = nht_swordsmanship_teaching_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_defensive_maneuvers_perk }
+			}
+			add_perk = nht_defensive_maneuvers_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_shield_of_ingenuity_perk }
+			}
+			add_perk = nht_shield_of_ingenuity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_sentinel_perk }
+			}
+			add_perk = nht_sentinel_perk
+		}
+
+#leadership from more lifestyles mod
+
+		if = {
+			limit = {
+				root = { has_perk = nht_leading_by_example_perk }
+			}
+			add_perk = nht_leading_by_example_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_impressed_court_perk }
+			}
+			add_perk = nht_impressed_court_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_visionary_admirer_perk }
+			}
+			add_perk = nht_visionary_admirer_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_regal_prosperity_perk }
+			}
+			add_perk = nht_regal_prosperity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_serenity_embrace_perk }
+			}
+			add_perk = nht_serenity_embrace_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_effective_architecture_perk }
+			}
+			add_perk = nht_effective_architecture_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_agile_construction_perk }
+			}
+			add_perk = nht_agile_construction_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_on_grand_course_perk }
+			}
+			add_perk = nht_on_grand_course_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_visionary_perk }
+			}
+			add_perk = nht_visionary_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_pluralistic_unity_perk }
+			}
+			add_perk = nht_pluralistic_unity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_covenant_of_faith_perk }
+			}
+			add_perk = nht_covenant_of_faith_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_cultural_ascendancy_perk }
+			}
+			add_perk = nht_cultural_ascendancy_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_faith_celerity_perk }
+			}
+			add_perk = nht_faith_celerity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_unity_through_diversity_perk }
+			}
+			add_perk = nht_unity_through_diversity_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_joint_forces_perk }
+			}
+			add_perk = nht_joint_forces_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_tithes_of_difference_perk }
+			}
+			add_perk = nht_tithes_of_difference_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_sacred_tithe_perk }
+			}
+			add_perk = nht_sacred_tithe_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_charismatic_perk }
+			}
+			add_perk = nht_charismatic_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_eloquent_authority_perk }
+			}
+			add_perk = nht_eloquent_authority_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_commerce_maestro_perk }
+			}
+			add_perk = nht_commerce_maestro_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_family_ties_perk }
+			}
+			add_perk = nht_family_ties_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_charisma_grasp_perk }
+			}
+			add_perk = nht_charisma_grasp_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_mesmerizing_aura_perk }
+			}
+			add_perk = nht_mesmerizing_aura_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_fortunate_predisposition_perk }
+			}
+			add_perk = nht_fortunate_predisposition_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_destiny_balance_perk }
+			}
+			add_perk = nht_destiny_balance_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_serendipity_touch_perk }
+			}
+			add_perk = nht_serendipity_touch_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = nht_founder_perk }
+			}
+			add_perk = nht_founder_perk
+		}
+
+# the target gets all lifestyle trait tracks that the owner had
+
+		if = {
+			limit = {
+				root = { has_trait = tourney_participant }
+			}
+			add_trait = tourney_participant
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = foot
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = foot
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = foot value = 30 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = foot
+						value >= 65
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = foot
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = foot value = 65 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = foot
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = foot value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = bow
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = bow
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = bow value = 30 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = bow
+						value >= 65
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = bow
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = bow value = 65 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = bow
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = bow value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = horse
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = horse
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = horse value = 30 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = horse
+						value >= 65
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = horse
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = horse value = 65 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = horse
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = horse value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = wit
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = wit
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = wit value = 30 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = wit
+						value >= 65
+					}
+					has_trait_xp = {
+						trait = tourney_participant
+						track = wit
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = wit value = 65 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = tourney_participant
+						track = wit
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = tourney_participant track = wit value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_blademaster }
+			}
+			add_trait = lifestyle_blademaster
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_blademaster
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_blademaster
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_blademaster value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_blademaster
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_blademaster value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_mystic }
+			}
+			add_trait = lifestyle_mystic
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_mystic
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_mystic
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_mystic value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_mystic
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_mystic value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_reveler }
+			}
+			add_trait = lifestyle_reveler
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_reveler
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_reveler
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_reveler value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_reveler
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_reveler value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_hunter }
+			}
+			add_trait = lifestyle_hunter
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = hunter
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = hunter
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_hunter track = hunter value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = hunter
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_hunter track = hunter value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = falconer
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = falconer
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_hunter track = falconer value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_hunter
+						track = falconer
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_hunter track = falconer value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_physician }
+			}
+			add_trait = lifestyle_physician
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_physician
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_physician
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_physician value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_physician
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_physician value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = pilgrim }
+			}
+			add_trait = pilgrim
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = pilgrim
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = pilgrim
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = pilgrim value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = pilgrim
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = pilgrim value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_herbalist }
+			}
+			add_trait = lifestyle_herbalist
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_gardener }
+			}
+			add_trait = lifestyle_gardener
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = lifestyle_traveler }
+			}
+			add_trait = lifestyle_traveler
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = travel
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = travel
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_traveler track = travel value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = travel
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_traveler track = travel value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = danger
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = danger
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_traveler track = danger value = 50 }
+		}
+		
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = lifestyle_traveler
+						track = danger
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = lifestyle_traveler track = danger value = 100 }
+		}
+
+# vanilla commander traits and "commanders+" traits (with xp)
+
+		if = {
+			limit = {
+				root = { has_trait = logistician }
+			}
+			add_trait = logistician
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = logistician
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = logistician
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = logistician value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = logistician
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = logistician value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = military_engineer }
+			}
+			add_trait = military_engineer
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = military_engineer
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = military_engineer
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = military_engineer value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = military_engineer
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = military_engineer value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = aggressive_attacker }
+			}
+			add_trait = aggressive_attacker
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = aggressive_attacker
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = aggressive_attacker
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = aggressive_attacker value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = aggressive_attacker
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = aggressive_attacker value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = unyielding_defender }
+			}
+			add_trait = unyielding_defender
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = unyielding_defender
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = unyielding_defender
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = unyielding_defender value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = unyielding_defender
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = unyielding_defender value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = forder }
+			}
+			add_trait = forder
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = forder
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = forder
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = forder value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = forder
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = forder value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = flexible_leader }
+			}
+			add_trait = flexible_leader
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = flexible_leader
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = flexible_leader
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = flexible_leader value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = flexible_leader
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = flexible_leader value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = desert_warrior }
+			}
+			add_trait = desert_warrior
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = desert_warrior
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = desert_warrior
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = desert_warrior value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = desert_warrior
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = desert_warrior value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = jungle_stalker }
+			}
+			add_trait = jungle_stalker
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = jungle_stalker
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = jungle_stalker
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = jungle_stalker value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = jungle_stalker
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = jungle_stalker value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = reaver }
+			}
+			add_trait = reaver
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = reaver
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = reaver
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = reaver value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = reaver
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = reaver value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = reckless }
+			}
+			add_trait = reckless
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = reckless
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = reckless
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = reckless value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = reckless
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = reckless value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = holy_warrior }
+			}
+			add_trait = holy_warrior
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = holy_warrior
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = holy_warrior
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = holy_warrior value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = holy_warrior
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = holy_warrior value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = open_terrain_expert }
+			}
+			add_trait = open_terrain_expert
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = open_terrain_expert
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = open_terrain_expert
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = open_terrain_expert value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = open_terrain_expert
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = open_terrain_expert value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = rough_terrain_expert }
+			}
+			add_trait = rough_terrain_expert
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = rough_terrain_expert
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = rough_terrain_expert
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = rough_terrain_expert value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = rough_terrain_expert
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = rough_terrain_expert value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = forest_fighter }
+			}
+			add_trait = forest_fighter
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = forest_fighter
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = forest_fighter
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = forest_fighter value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = forest_fighter
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = forest_fighter value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = cautious_leader }
+			}
+			add_trait = cautious_leader
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = cautious_leader
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = cautious_leader
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = cautious_leader value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = cautious_leader
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = cautious_leader value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = organizer }
+			}
+			add_trait = organizer
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = organizer
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = organizer
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = organizer value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = organizer
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = organizer value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = winter_soldier }
+			}
+			add_trait = winter_soldier
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = winter_soldier
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = winter_soldier
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = winter_soldier value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = winter_soldier
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = winter_soldier value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = mapper }
+			}
+			add_trait = mapper
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = mapper
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = mapper
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = mapper value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = mapper
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = mapper value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = observant_pathfinder }
+			}
+			add_trait = observant_pathfinder
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = observant_pathfinder
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = observant_pathfinder
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = observant_pathfinder value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = observant_pathfinder
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = observant_pathfinder value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = respected_leader }
+			}
+			add_trait = respected_leader
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = respected_leader
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = respected_leader
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = respected_leader value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = respected_leader
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = respected_leader value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = sea_raider }
+			}
+			add_trait = sea_raider
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = sea_raider
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = sea_raider
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = sea_raider value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = sea_raider
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = sea_raider value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = seasoned_rover }
+			}
+			add_trait = seasoned_rover
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = seasoned_rover
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = seasoned_rover
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = seasoned_rover value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = seasoned_rover
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = seasoned_rover value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = resolute_localist }
+			}
+			add_trait = resolute_localist
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = resolute_localist
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = resolute_localist
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = resolute_localist value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = resolute_localist
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = resolute_localist value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = relentless_pursuer }
+			}
+			add_trait = relentless_pursuer
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = relentless_pursuer
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = relentless_pursuer
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = relentless_pursuer value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = relentless_pursuer
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = relentless_pursuer value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = infiltration_specialist }
+			}
+			add_trait = infiltration_specialist
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = infiltration_specialist
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = infiltration_specialist
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = infiltration_specialist value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = infiltration_specialist
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = infiltration_specialist value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = battlefield_medic }
+			}
+			add_trait = battlefield_medic
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = battlefield_medic
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = battlefield_medic
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = battlefield_medic value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = battlefield_medic
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = battlefield_medic value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = dauntless_leader }
+			}
+			add_trait = dauntless_leader
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = dauntless_leader
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = dauntless_leader
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = dauntless_leader value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = dauntless_leader
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = dauntless_leader value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = crafty_commander }
+			}
+			add_trait = crafty_commander
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = crafty_commander
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = crafty_commander
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = crafty_commander value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = crafty_commander
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = crafty_commander value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = cautious_planner }
+			}
+			add_trait = cautious_planner
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = cautious_planner
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = cautious_planner
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = cautious_planner value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = cautious_planner
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = cautious_planner value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = bannerlord }
+			}
+			add_trait = bannerlord
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = bannerlord
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = bannerlord
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = bannerlord value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = bannerlord
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = bannerlord value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = focus_specialist }
+			}
+			add_trait = focus_specialist
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = focus_specialist
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = focus_specialist
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = focus_specialist value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = focus_specialist
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = focus_specialist value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = master_ambusher }
+			}
+			add_trait = master_ambusher
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = master_ambusher
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = master_ambusher
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = master_ambusher value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = master_ambusher
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = master_ambusher value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = navigator }
+			}
+			add_trait = navigator
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = navigator
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = navigator
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = navigator value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = navigator
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = navigator value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = zealot }
+			}
+			add_trait = zealot
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = zealot
+						value >= 30
+					}
+					has_trait_xp = {
+						trait = zealot
+						value < 65
+					}
+				}
+			}
+			add_trait_xp = { trait = zealot value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = zealot
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = zealot value = 100 }
+		}
+
+# decision traits that make sense to carry over
+
+		if = {
+			limit = {
+				root = { has_trait = adventurer }
+			}
+			add_trait = adventurer
+		}
+		if = {
+			limit = {
+				root = { has_trait = berserker }
+			}
+			add_trait = berserker
+		}
+		if = {
+			limit = {
+				root = { has_trait = devoted }
+			}
+			add_trait = devoted
+		}
+		if = {
+			limit = {
+				root = { has_trait = poet }
+			}
+			add_trait = poet
+		}
+		if = {
+			limit = {
+				root = { has_trait = viking }
+			}
+			add_trait = viking
+		}
+
+	}
+
+	death = {
+		death_reason = death_suicide
+	}
+}
