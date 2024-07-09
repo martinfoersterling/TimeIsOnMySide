@@ -1,0 +1,18 @@
+﻿l_english:
+
+  game_rule_category_tioms: "Time is on my side"
+
+  # gamerule - stress cost for soul travel
+  rule_tioms_soul_travel_stress_cost_scaling:0 "#R TIOMS: #! Soul Tavel Cost Scaling"
+  rule_tioms_soul_travel_stress_cost_scaling_desc:0 "Select stress cost for Soul Travel."
+  setting_tioms_soul_travel_stress_cost_default:0 "Default"
+  setting_tioms_soul_travel_stress_cost_default_desc:0 "Soul Travel causes 300 stress for the target host (level 3 stress)."
+  setting_tioms_soul_travel_stress_cost_200:0 "Reduced"
+  setting_tioms_soul_travel_stress_cost_200_desc:0 "Soul Travel causes 200 stress for the target host (level 2 stress)."
+  setting_tioms_soul_travel_stress_cost_100:0 "Greatly reduced"
+  setting_tioms_soul_travel_stress_cost_100_desc:0 "Soul Travel causes 100 stress for the target host (level 1 stress)."
+  setting_tioms_soul_travel_stress_cost_none:0 "None"
+  setting_tioms_soul_travel_stress_cost_none_desc:0 "Soul Travel does not cause stress."
+
+
+

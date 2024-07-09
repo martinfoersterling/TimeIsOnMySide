@@ -1,0 +1,12 @@
+﻿
+tioms_soul_travel_stress_cost_scaling = {
+    categories = {
+		tioms difficulty
+	}
+    default = tioms_soul_travel_stress_cost_default
+
+    tioms_soul_travel_stress_cost_default = {}
+    tioms_soul_travel_stress_cost_200 = {}
+    tioms_soul_travel_stress_cost_100 = {}
+    tioms_soul_travel_stress_cost_none = {}
+}

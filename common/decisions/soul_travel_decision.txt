@@ -23,6 +23,7 @@ soul_travel_decision = {
 		OR = {
 			has_trait = witch
 			any_secret = { secret_type = secret_witch }
+		}
 	}
 
 	effect = {

@@ -21,8 +21,20 @@ soul_travel_decision_effect = {
 		}
 	}
 	player_heir = {
+
+		if = {
+			limit = {
+				NOT = { has_global_variable = TIOMS_soul_travel_cost }
+			}
+			set_global_variable = {
+				name = TIOMS_soul_travel_cost
+				value = 300
+			}
+		}
+
 		#TODO more stress... like... ALL THE STRESS
-		add_stress = 900
+		add_stress = global_var:TIOMS_soul_travel_cost
+
 		#TODO I havent found a way to remove perks or perk unlocks. There seems to be no command for that
 		# so in order to not be completely overpowered, it makes sense that the heir must be a child so
 		# that the heir has no perks, in order to not gain both the current AND future player characters' perks.

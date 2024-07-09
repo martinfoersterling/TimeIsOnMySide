@@ -1,0 +1,27 @@
+﻿
+on_game_start = {
+	on_actions = { tioms_on_game_start }
+}
+
+tioms_on_game_start = {
+	effect = {
+		set_global_variable = {
+			name = TIOMS_soul_travel_cost
+			value = {
+				value = 0
+				if = {
+					limit = { has_game_rule = tioms_soul_travel_stress_cost_100 }
+					add = 100
+				}
+				else_if = {
+					limit = { has_game_rule = tioms_soul_travel_stress_cost_200 }
+					add = 200
+				}
+				else_if = {
+					limit = { has_game_rule = tioms_soul_travel_stress_cost_default }
+					add = 300
+				}
+			}
+		}
+	}
+}
