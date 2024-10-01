@@ -2931,6 +2931,7 @@ soul_travel_decision_effect = {
 			limit = {
 				root = { has_trait = adventurer }
 			}
+			remove_trait = adventurer_follower
 			add_trait = adventurer
 		}
 		if = {
