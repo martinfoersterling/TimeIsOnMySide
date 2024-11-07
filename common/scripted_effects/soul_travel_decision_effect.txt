@@ -871,6 +871,178 @@ soul_travel_decision_effect = {
 			add_perk = theologian_perk
 		}
 
+#surveyor
+
+		if = {
+			limit = {
+				root = { has_perk = mustering_the_troops_perk }
+			}
+			add_perk = mustering_the_troops_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = know_your_land_know_your_people_perk }
+			}
+			add_perk = know_your_land_know_your_people_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = no_stone_unturned_perk }
+			}
+			add_perk = no_stone_unturned_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = travel_logs_perk }
+			}
+			add_perk = travel_logs_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = local_inspection_perk }
+			}
+			add_perk = local_inspection_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = local_arbitration_perk }
+			}
+			add_perk = local_arbitration_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = realm_charts_perk }
+			}
+			add_perk = realm_charts_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = personal_touch_perk }
+			}
+			add_perk = personal_touch_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = surveyor_perk }
+			}
+			add_perk = surveyor_perk
+		}
+
+#wayfarer
+
+		if = {
+			limit = {
+				root = { has_perk = well_prepared_perk }
+			}
+			add_perk = well_prepared_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = far_and_wide_perk }
+			}
+			add_perk = far_and_wide_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = just_one_more_hill_perk }
+			}
+			add_perk = just_one_more_hill_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = roaming_perk }
+			}
+			add_perk = roaming_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = of_the_people_perk }
+			}
+			add_perk = of_the_people_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = local_hero_perk }
+			}
+			add_perk = local_hero_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = travel_companion_perk }
+			}
+			add_perk = travel_companion_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = the_home_away_from_home_perk }
+			}
+			add_perk = the_home_away_from_home_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = wayfarer_perk }
+			}
+			add_perk = wayfarer_perk
+		}
+
+#voyager
+
+		if = {
+			limit = {
+				root = { has_perk = power_at_home_perk }
+			}
+			add_perk = power_at_home_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = mercenary_contacts_perk }
+			}
+			add_perk = mercenary_contacts_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = journey_planner_perk }
+			}
+			add_perk = journey_planner_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = finally_there_perk }
+			}
+			add_perk = finally_there_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = journey_perk }
+			}
+			add_perk = journey_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = souvenirs_aplenty_perk }
+			}
+			add_perk = souvenirs_aplenty_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = gracious_host_impeccable_guest_perk }
+			}
+			add_perk = gracious_host_impeccable_guest_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = been_there_done_that_perk }
+			}
+			add_perk = been_there_done_that_perk
+		}
+		if = {
+			limit = {
+				root = { has_perk = voyager_perk }
+			}
+			add_perk = voyager_perk
+		}
+
+
 #prowess from more lifestyles mod
 
 		if = {
@@ -1732,6 +1904,111 @@ soul_travel_decision_effect = {
 			}
 			add_trait_xp = { trait = lifestyle_traveler track = danger value = 100 }
 		}
+
+# new stuff with roads to power
+
+		if = {
+			limit = {
+				root = { has_trait = knight_errant }
+			}
+			add_trait = knight_errant
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = knight_errant
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = knight_errant
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = knight_errant value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = knight_errant
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = knight_errant value = 100 }
+		}
+
+		if = {
+			limit = {
+				root = { has_trait = governor }
+			}
+			add_trait = governor
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = governor
+						value >= 25
+					}
+					has_trait_xp = {
+						trait = governor
+						value < 50
+					}
+				}
+			}
+			add_trait_xp = { trait = governor value = 25 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = governor
+						value >= 50
+					}
+					has_trait_xp = {
+						trait = governor
+						value < 75
+					}
+				}
+			}
+			add_trait_xp = { trait = governor value = 50 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = governor
+						value >= 75
+					}
+					has_trait_xp = {
+						trait = governor
+						value < 100
+					}
+				}
+			}
+			add_trait_xp = { trait = governor value = 75 }
+		}
+
+		if = {
+			limit = {
+				root = {
+					has_trait_xp = {
+						trait = governor
+						value >= 100
+					}
+				}
+			}
+			add_trait_xp = { trait = governor value = 100 }
+		}
+
 
 # vanilla commander traits and "commanders+" traits (with xp)
 
@@ -2933,6 +3210,12 @@ soul_travel_decision_effect = {
 			}
 			remove_trait = adventurer_follower
 			add_trait = adventurer
+		}
+		if = {
+			limit = {
+				root = { has_trait = varangian }
+			}
+			add_trait = varangian
 		}
 		if = {
 			limit = {
