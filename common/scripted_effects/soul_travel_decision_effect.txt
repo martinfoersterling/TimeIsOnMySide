@@ -1373,6 +1373,308 @@ soul_travel_decision_effect = {
 			add_perk = nht_founder_perk
 		}
 
+# additional lifestyles mod
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_01 }
+			}
+			add_perk = gpt_diplomacy_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_02 }
+			}
+			add_perk = gpt_diplomacy_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_03 }
+			}
+			add_perk = gpt_diplomacy_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_04 }
+			}
+			add_perk = gpt_diplomacy_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_05 }
+			}
+			add_perk = gpt_diplomacy_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_06 }
+			}
+			add_perk = gpt_diplomacy_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_07 }
+			}
+			add_perk = gpt_diplomacy_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_diplomacy_perk_08 }
+			}
+			add_perk = gpt_diplomacy_perk_08
+		}
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_01 }
+			}
+			add_perk = gpt_intrigue_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_02 }
+			}
+			add_perk = gpt_intrigue_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_03 }
+			}
+			add_perk = gpt_intrigue_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_04 }
+			}
+			add_perk = gpt_intrigue_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_05 }
+			}
+			add_perk = gpt_intrigue_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_06 }
+			}
+			add_perk = gpt_intrigue_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_07 }
+			}
+			add_perk = gpt_intrigue_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_intrigue_perk_08 }
+			}
+			add_perk = gpt_intrigue_perk_08
+		}
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_01 }
+			}
+			add_perk = gpt_learning_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_02 }
+			}
+			add_perk = gpt_learning_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_03 }
+			}
+			add_perk = gpt_learning_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_04 }
+			}
+			add_perk = gpt_learning_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_05 }
+			}
+			add_perk = gpt_learning_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_06 }
+			}
+			add_perk = gpt_learning_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_07 }
+			}
+			add_perk = gpt_learning_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_learning_perk_08 }
+			}
+			add_perk = gpt_learning_perk_08
+		}
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_01 }
+			}
+			add_perk = gpt_martial_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_02 }
+			}
+			add_perk = gpt_martial_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_03 }
+			}
+			add_perk = gpt_martial_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_04 }
+			}
+			add_perk = gpt_martial_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_05 }
+			}
+			add_perk = gpt_martial_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_06 }
+			}
+			add_perk = gpt_martial_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_07 }
+			}
+			add_perk = gpt_martial_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_martial_perk_08 }
+			}
+			add_perk = gpt_martial_perk_08
+		}
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_01 }
+			}
+			add_perk = gpt_stewardship_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_02 }
+			}
+			add_perk = gpt_stewardship_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_03 }
+			}
+			add_perk = gpt_stewardship_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_04 }
+			}
+			add_perk = gpt_stewardship_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_05 }
+			}
+			add_perk = gpt_stewardship_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_06 }
+			}
+			add_perk = gpt_stewardship_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_07 }
+			}
+			add_perk = gpt_stewardship_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_stewardship_perk_08 }
+			}
+			add_perk = gpt_stewardship_perk_08
+		}
+
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_01 }
+			}
+			add_perk = gpt_wanderer_perk_01
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_02 }
+			}
+			add_perk = gpt_wanderer_perk_02
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_03 }
+			}
+			add_perk = gpt_wanderer_perk_03
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_04 }
+			}
+			add_perk = gpt_wanderer_perk_04
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_05 }
+			}
+			add_perk = gpt_wanderer_perk_05
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_06 }
+			}
+			add_perk = gpt_wanderer_perk_06
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_07 }
+			}
+			add_perk = gpt_wanderer_perk_07
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_08 }
+			}
+			add_perk = gpt_wanderer_perk_08
+		}
+		if = {
+			limit = {
+				root = { has_perk = gpt_wanderer_perk_09 }
+			}
+			add_perk = gpt_wanderer_perk_09
+		}
+
 # the target gets all lifestyle trait tracks that the owner had
 
 		if = {
@@ -1905,7 +2207,7 @@ soul_travel_decision_effect = {
 			add_trait_xp = { trait = lifestyle_traveler track = danger value = 100 }
 		}
 
-# new stuff with roads to power
+# new traits with roads to power
 
 		if = {
 			limit = {
